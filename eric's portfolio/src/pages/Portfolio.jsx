@@ -5,7 +5,7 @@ export default function Portfolio() {
     return (
         <div>
             <h1>Portfolio</h1>
-            <div className="projects">
+            <div className="project-container">
                 <Project project={projects[0]} />
                 <Project project={projects[1]} />
                 <Project project={projects[2]} />
