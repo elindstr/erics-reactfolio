@@ -1,4 +1,4 @@
-# erics-reactfolio: some of my favorite projects
+# reactfolio: showing off some of my favorite projects
 
 ## Description
 
