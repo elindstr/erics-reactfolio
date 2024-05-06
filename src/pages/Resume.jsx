@@ -1,13 +1,13 @@
-export default function Resume() {    
-    const pdfUrl = "https://elindstr-portfolio.netlify.app/assets/resume.pdf";
-    
+const pdfUrl = "/assets/resume.pdf"
+
+export default function Resume() {        
     return (
-        <>
+        <div>
             <h1>Resume</h1>
-            <a href={pdfUrl} download="Resume.pdf">
+            <a href={pdfUrl} download="resume.pdf">
                 <button>Download PDF</button>
             </a>
-        </>
+        </div>
     )
 }
 
