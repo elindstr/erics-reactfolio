@@ -62,27 +62,29 @@ export default function Contact() {
             setIsSent(true)
         }
     }
-
     
     return (
         <>
-        
-        {!isSent? (
-            <>
-            <h1>Contact</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Name: </label><input value={form.name} onChange={handleChange} onBlur={handleBlur} name="name" type="text" placeholder="name"/> <span>{formError.name}</span> <br/>
+            {!isSent ? (
+                <div className="contact-form">
+                    <h1>Contact</h1>
+                    <form onSubmit={handleSubmit} aria-describedby="formHelp">
+                        <label htmlFor="name">Name:</label> <span aria-live="polite">{formError.name}</span>
+                        <input id="name" name="name" type="text" value={form.name} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your name" aria-required="true" />
 
-                <label htmlFor="email">Email: </label><input value={form.email}onChange={handleChange} onBlur={handleBlur} name="email" type="email" placeholder="email"/> <span>{formError.email}</span><br/>
+                        <label htmlFor="email">Email:</label> <span aria-live="polite">{formError.email}</span>
+                        <input id="email" name="email" type="email" value={form.email} onChange={handleChange} onBlur={handleBlur} placeholder="Enter your email" aria-required="true" />
+                        
+                        <label htmlFor="message">Message:</label> <span aria-live="polite">{formError.message}</span>
+                        <textarea id="message" name="message" value={form.message} onChange={handleChange} onBlur={handleBlur} placeholder="Your message" aria-required="true"></textarea>
 
-                <label htmlFor="message">Message: </label><textarea value={form.message} onChange={handleChange} onBlur={handleBlur} name="message" placeholder="message" /> <span>{formError.message}</span> <br/>
-
-                <button>Send</button>
-            </form>
-            </>
-            
-        ): (<p>Thanks for your message!</p>)}
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            ) : (
+                <p>Thanks for your message!</p>
+            )}
         </>
-    )
+    );
 }
     
