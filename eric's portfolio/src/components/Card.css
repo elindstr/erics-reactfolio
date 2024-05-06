@@ -1,0 +1,41 @@
+.project-card {
+    width: 300px; /* Adjust size as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* For absolute positioning of elements inside */
+}
+
+.project-title {
+    font-size: 1.25em; /* Making title slightly larger */
+    color: #007bff;
+    margin-bottom: 10px;
+    text-decoration: none; /* Removes underline */
+}
+
+.project-image {
+    width: 100%; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    opacity: 0.5; /* Making the image lighter */
+    transform: scale(1.1); /* Zoom effect */
+    transition: transform 0.3s ease-out; /* Smooth transition for hover effects */
+}
+
+.project-description {
+    display: inline; /* Inline with the GitHub logo */
+    font-size: 0.9em;
+    color: #666;
+    margin-right: 5px; /* Space between text and GitHub logo */
+}
+
+.github-icon {
+    width: 24px; /* Fixed size for consistency */
+    height: 24px; /* Fixed size for consistency */
+    vertical-align: middle; /* Aligns with the text */
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.2); /* Zoom in more on hover */
+}

@@ -1,0 +1,95 @@
+/* Overlay covering the entire screen */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Modal content box */
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-height: 80vh;
+    overflow-y: auto
+}
+@media screen and (max-width: 820px) {
+    .modal-content {
+      width: 90%; 
+    }
+  }
+
+/* close button */
+.modal-content > button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Project image, placed to the left */
+.project-image {
+    width: 200px;
+    height: auto; 
+    margin-right: 20px;
+    border-radius: 33px;
+}
+
+/* Container for the text and links to vertically align them */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Project title as a clickable link */
+.project-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 0;
+    cursor: pointer;
+}
+.project-title:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+.project-tech {
+    font-size: 20px
+}
+
+/* GitHub icon image */
+.github-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity var(--transformation-speed) ease;
+}
+.github-icon:hover {
+    opacity: 1;
+    transition: opacity var(--transformation-speed) ease;
+}
+
+/* Project description */
+.project-description {
+    text-align: left;
+    padding-top: 10px;
+}
