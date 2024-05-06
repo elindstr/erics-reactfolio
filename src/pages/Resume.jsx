@@ -1,4 +1,4 @@
-const pdfUrl = "/assets/resume.pdf"
+const pdfUrl = "../assets/resume.pdf"
 
 export default function Resume() {        
     return (
