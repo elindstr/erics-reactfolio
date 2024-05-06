@@ -1,5 +1,5 @@
 export default function Resume() {    
-    const pdfUrl = "/assets/resume.pdf";
+    const pdfUrl = "./assets/resume.pdf";
 
     return (
         <>
