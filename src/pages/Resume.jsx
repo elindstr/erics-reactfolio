@@ -1,6 +1,6 @@
 export default function Resume() {    
-    const pdfUrl = "./assets/resume.pdf";
-
+    const pdfUrl = "https://elindstr-portfolio.netlify.app/assets/resume.pdf";
+    
     return (
         <>
             <h1>Resume</h1>
